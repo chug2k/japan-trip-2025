@@ -1,0 +1,179 @@
+{
+  "trip": {
+    "title": "Japan",
+    "subtitle": "冬の旅",
+    "dates": "December 24 — January 1",
+    "year": "Winter 2024 / 25",
+    "travelers": ["Chloe", "Minjeong", "Charles"]
+  },
+  "days": [
+    {
+      "type": "hero",
+      "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+      "imageAlt": "Japan temple in snow"
+    },
+    {
+      "type": "day",
+      "dayLabel": "Day 1 — Wednesday",
+      "date": "Dec 24",
+      "title": "Arrival in Tokyo",
+      "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
+      "imageAlt": "Tokyo cityscape",
+      "tags": [{ "text": "Arrival", "class": "tag-travel" }],
+      "description": "Chloe and Minjeong touch down in Tokyo. Clear customs, grab your bags, and make your way to the hotel. Take it easy after the long flight.",
+      "infoBlocks": [
+        { "icon": "🏨", "label": "Stay", "title": "Tokyo", "subtitle": "Hotel TBD" }
+      ]
+    },
+    {
+      "type": "day",
+      "dayLabel": "Day 2 — Thursday",
+      "date": "Dec 25",
+      "title": "To the Mountains",
+      "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80",
+      "imageAlt": "Shinkansen bullet train",
+      "tags": [
+        { "text": "Christmas", "class": "tag-travel" },
+        { "text": "Ski Country", "class": "tag-ski" }
+      ],
+      "description": "Merry Christmas! Travel through snowy countryside to Shiga Kogen — Japan's largest ski resort.",
+      "timeline": [
+        { "time": "Afternoon", "title": "Shinkansen to Nagano", "detail": "Bullet train from Tokyo", "cost": "¥8,500" },
+        { "time": "Late PM", "title": "Local train + shuttle", "detail": "Nagano → Yudanaka → Shiga Kogen", "cost": "¥1,590" },
+        { "time": "Evening", "title": "Teppa Room", "detail": "Local Shiga Kogen craft beers" }
+      ],
+      "infoBlocks": [
+        {
+          "icon": "🏔️",
+          "label": "Stay",
+          "title": "Villa Ichinose",
+          "subtitle": "Shiga Kogen · Check-in 14:00-21:00",
+          "confirmation": {
+            "file": "confirmations/1688894602775091 check-in voucher.pdf",
+            "number": "RYa0m2g2up",
+            "status": "Paid"
+          }
+        }
+      ]
+    },
+    {
+      "type": "day",
+      "dayLabel": "Day 3 — Friday",
+      "date": "Dec 26",
+      "title": "Ski Day",
+      "image": "https://images.unsplash.com/photo-1486591978090-58e619d37fe7?w=800&q=80",
+      "imageAlt": "Skiing in Japan",
+      "tags": [{ "text": "Skiing", "class": "tag-ski" }],
+      "description": "Hit the slopes! Ski lessons with Ride Shiga at Ichinose Family resort.",
+      "highlight": {
+        "title": "Ride Shiga Lessons",
+        "text": "Book at ride-shiga.com — group or private lessons for all levels."
+      },
+      "infoBlocks": [
+        { "icon": "⛷️", "label": "Resort", "title": "Ichinose Family", "subtitle": "Part of Japan's largest ski area — 19 connected resorts" }
+      ]
+    },
+    {
+      "type": "day",
+      "dayLabel": "Day 3 — Evening",
+      "date": "Dec 26",
+      "title": "Shibu Onsen",
+      "image": "https://images.unsplash.com/photo-1553653924-39b70295f8da?w=800&q=80",
+      "imageAlt": "Japanese onsen town",
+      "tags": [
+        { "text": "Onsen", "class": "tag-onsen" },
+        { "text": "Kaiseki", "class": "tag-food" }
+      ],
+      "description": "Bus to the historic hot spring town. Check into your ryokan, enjoy kaiseki dinner, then onsen hop in your yukata.",
+      "onsenGrid": {
+        "title": "The Nine Baths",
+        "subtitle": "Each has different healing properties. Hit 3-4 tonight!",
+        "baths": [
+          { "num": 1, "name": "初湯" },
+          { "num": 2, "name": "笹の湯" },
+          { "num": 3, "name": "綿の湯" },
+          { "num": 4, "name": "竹の湯" },
+          { "num": 5, "name": "松の湯" },
+          { "num": 6, "name": "目洗の湯" },
+          { "num": 7, "name": "七操の湯" },
+          { "num": 8, "name": "神明滝の湯" },
+          { "num": 9, "name": "大湯" }
+        ]
+      },
+      "infoBlocks": [
+        {
+          "icon": "🏯",
+          "label": "Stay",
+          "title": "Shibu Hotel (渋ホテル)",
+          "subtitle": "Yudanaka · Economy Twin Non-Smoking",
+          "confirmation": {
+            "file": "confirmations/Confirmation_for_Booking_ID_#_1678348913.pdf",
+            "number": "1678348913",
+            "status": "Paid"
+          }
+        }
+      ]
+    },
+    {
+      "type": "day",
+      "dayLabel": "Day 4 — Saturday",
+      "date": "Dec 27",
+      "title": "Snow Monkeys",
+      "image": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
+      "imageAlt": "Snow monkeys",
+      "tags": [
+        { "text": "Morning Baths", "class": "tag-onsen" },
+        { "text": "Tokyo", "class": "tag-travel" }
+      ],
+      "timeline": [
+        { "time": "6:00 AM", "title": "Early morning baths", "detail": "Squeeze in 2-3 more before breakfast" },
+        { "time": "10:00 AM", "title": "Checkout", "detail": "Optional: Bath #9 after", "cost": "¥500" },
+        { "time": "Late AM", "title": "Jigokudani Monkey Park", "detail": "~30 min walk through snowy forest" },
+        { "time": "Afternoon", "title": "Return to Tokyo", "detail": "Train back to the city" }
+      ],
+      "infoBlocks": [
+        { "icon": "🏨", "label": "Stay", "title": "Tokyo", "subtitle": "Hotel TBD" }
+      ]
+    },
+    {
+      "type": "day",
+      "dayLabel": "Day 5 — Sunday",
+      "date": "Dec 28",
+      "title": "Tokyo Day",
+      "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&q=80",
+      "imageAlt": "Tokyo street",
+      "tags": [{ "text": "City", "class": "tag-city" }],
+      "description": "Minjeong flies out in the morning. Spend the day exploring Tokyo with Chloe — endless neighborhoods, incredible food, unforgettable moments.",
+      "infoBlocks": [
+        { "icon": "✈️", "label": "Departure", "title": "Safe travels, Minjeong!", "subtitle": "See you next time" },
+        { "icon": "🏨", "label": "Stay", "title": "Tokyo", "subtitle": "Hotel TBD" }
+      ]
+    },
+    {
+      "type": "day",
+      "dayLabel": "Days 6-8",
+      "date": "Dec 29-31",
+      "title": "Tokyo & NYE",
+      "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&q=80",
+      "imageAlt": "Shibuya crossing",
+      "tags": [
+        { "text": "Explore", "class": "tag-city" },
+        { "text": "Eat", "class": "tag-food" }
+      ],
+      "description": "Three full days in Tokyo. Explore, eat, relax. Ring in 2025 your way.",
+      "options": [
+        { "icon": "🎉", "title": "Shibuya Countdown", "text": "The famous crossing at midnight. Pure energy." },
+        { "icon": "⛩️", "title": "Hatsumode at Meiji Shrine", "text": "Traditional first shrine visit. Peaceful and spiritual." }
+      ],
+      "infoBlocks": [
+        { "icon": "🏨", "label": "Stay", "title": "Tokyo", "subtitle": "Hotel TBD" }
+      ]
+    },
+    {
+      "type": "final",
+      "dayLabel": "January 1",
+      "image": "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&q=80",
+      "imageAlt": "Mount Fuji"
+    }
+  ]
+}
