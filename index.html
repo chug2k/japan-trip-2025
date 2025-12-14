@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Japan Winter 2024</title>
+    <title>Japan Winter 2025</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -534,11 +534,52 @@
             padding: 0.3rem 0.6rem;
             border-radius: 100px;
         }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 100;
+            display: flex;
+            background: rgba(0,0,0,0.3);
+            border-radius: 100px;
+            padding: 0.2rem;
+            gap: 0.15rem;
+        }
+
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            border: none;
+            background: transparent;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.7rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            border-radius: 100px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.9);
+        }
+
+        .lang-btn:hover:not(.active) {
+            color: rgba(255,255,255,0.7);
+        }
     </style>
 </head>
 <body>
 
     <div class="card-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ko">KO</button>
+        </div>
+
         <!-- Progress Dots -->
         <div class="progress"></div>
 
@@ -562,21 +603,32 @@
     <script>
         // Itinerary data will be loaded from external JSON
         let itinerary = null;
+        let currentLang = 'en';
+
+        // Localization helper - extracts text for current language
+        function t(val) {
+            if (val === null || val === undefined) return '';
+            if (typeof val === 'string') return val;
+            if (typeof val === 'object' && val[currentLang] !== undefined) {
+                return val[currentLang];
+            }
+            return val.en || val.ko || '';
+        }
 
         // Render functions
         function renderTags(tags) {
             if (!tags) return '';
-            return `<div class="tags">${tags.map(t => `<span class="tag ${t.class}">${t.text}</span>`).join('')}</div>`;
+            return `<div class="tags">${tags.map(tag => `<span class="tag ${tag.class}">${t(tag.text)}</span>`).join('')}</div>`;
         }
 
         function renderTimeline(timeline) {
             if (!timeline) return '';
             return `<div class="timeline">${timeline.map(item => `
                 <div class="timeline-item">
-                    <div class="timeline-time">${item.time}</div>
+                    <div class="timeline-time">${t(item.time)}</div>
                     <div class="timeline-content">
-                        <h4>${item.title}</h4>
-                        <p>${item.detail}${item.cost ? ` <span class="cost">${item.cost}</span>` : ''}</p>
+                        <h4>${t(item.title)}</h4>
+                        <p>${t(item.detail)}${item.cost ? ` <span class="cost">${item.cost}</span>` : ''}</p>
                     </div>
                 </div>
             `).join('')}</div>`;
@@ -593,7 +645,7 @@
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
                     #${confirmation.number}
-                    <span class="confirmation-status">${confirmation.status}</span>
+                    <span class="confirmation-status">${t(confirmation.status)}</span>
                 </a>
             `;
         }
@@ -602,9 +654,9 @@
             if (!blocks) return '';
             return blocks.map(b => `
                 <div class="info-block">
-                    <div class="info-block-header">${b.icon} ${b.label}</div>
-                    <h4>${b.title}</h4>
-                    <p>${b.subtitle}</p>
+                    <div class="info-block-header">${b.icon} ${t(b.label)}</div>
+                    <h4>${t(b.title)}</h4>
+                    <p>${t(b.subtitle)}</p>
                     ${renderConfirmationLink(b.confirmation)}
                 </div>
             `).join('');
@@ -612,7 +664,7 @@
 
         function renderHighlight(highlight) {
             if (!highlight) return '';
-            return `<div class="highlight-card"><h4>${highlight.title}</h4><p>${highlight.text}</p></div>`;
+            return `<div class="highlight-card"><h4>${t(highlight.title)}</h4><p>${t(highlight.text)}</p></div>`;
         }
 
         function renderOptions(options) {
@@ -620,7 +672,7 @@
             return options.map(o => `
                 <div class="nye-option">
                     <div class="icon">${o.icon}</div>
-                    <div><h4>${o.title}</h4><p>${o.text}</p></div>
+                    <div><h4>${t(o.title)}</h4><p>${t(o.text)}</p></div>
                 </div>
             `).join('');
         }
@@ -629,8 +681,8 @@
             if (!grid) return '';
             return `
                 <div class="info-block">
-                    <div class="info-block-header">♨️ ${grid.title}</div>
-                    <p style="margin-bottom: 0.5rem; font-size: 0.8rem;">${grid.subtitle}</p>
+                    <div class="info-block-header">♨️ ${t(grid.title)}</div>
+                    <p style="margin-bottom: 0.5rem; font-size: 0.8rem;">${t(grid.subtitle)}</p>
                     <div class="onsen-grid">
                         ${grid.baths.map(b => `<div class="onsen-item"><div class="num">${b.num}</div><div class="name">${b.name}</div></div>`).join('')}
                     </div>
@@ -646,10 +698,10 @@
                         <div class="card-image-content">
                             <p class="day-label">${trip.year}</p>
                             <p class="day-date">${trip.title}</p>
-                            <p class="day-title">${trip.subtitle}</p>
-                            <p class="hero-dates">${trip.dates}</p>
+                            <p class="day-title">${t(trip.subtitle)}</p>
+                            <p class="hero-dates">${t(trip.dates)}</p>
                             <div class="travelers-row">
-                                ${trip.travelers.map(t => `<span class="traveler-chip">${t}</span>`).join('')}
+                                ${trip.travelers.map(traveler => `<span class="traveler-chip">${traveler}</span>`).join('')}
                             </div>
                         </div>
                     </div>
@@ -664,9 +716,9 @@
                     <div class="card-image">
                         <img src="${day.image}" alt="${day.imageAlt}">
                         <div class="card-image-content">
-                            <p class="day-label">${day.dayLabel}</p>
+                            <p class="day-label">${t(day.dayLabel)}</p>
                             <p class="final-japanese">またね</p>
-                            <p class="final-english">See you again, Japan</p>
+                            <p class="final-english">${t(day.farewell)}</p>
                             <p class="final-names">${trip.travelers.join(' · ')}</p>
                         </div>
                     </div>
@@ -681,14 +733,14 @@
                     <div class="card-image">
                         <img src="${day.image}" alt="${day.imageAlt}">
                         <div class="card-image-content">
-                            <p class="day-label">${day.dayLabel}</p>
-                            <p class="day-date">${day.date}</p>
-                            <p class="day-title">${day.title}</p>
+                            <p class="day-label">${t(day.dayLabel)}</p>
+                            <p class="day-date">${t(day.date)}</p>
+                            <p class="day-title">${t(day.title)}</p>
                             ${renderTags(day.tags)}
                         </div>
                     </div>
                     <div class="card-details">
-                        ${day.description ? `<p>${day.description}</p>` : ''}
+                        ${day.description ? `<p>${t(day.description)}</p>` : ''}
                         ${renderTimeline(day.timeline)}
                         ${renderHighlight(day.highlight)}
                         ${renderOptions(day.options)}
@@ -699,9 +751,14 @@
             `;
         }
 
-        function renderCards() {
+        let currentIndex = 0;
+
+        function renderCards(preserveIndex = false) {
             const container = document.querySelector('.card-container');
             const navBottom = container.querySelector('.nav-bottom');
+
+            // Remove existing cards
+            container.querySelectorAll('.card').forEach(card => card.remove());
 
             itinerary.days.forEach((day, index) => {
                 let cardHtml;
@@ -717,27 +774,41 @@
 
             // Render progress dots
             const progress = container.querySelector('.progress');
+            const activeIndex = preserveIndex ? currentIndex : 0;
             progress.innerHTML = itinerary.days.map((_, i) =>
-                `<div class="progress-dot${i === 0 ? ' active' : ''}" data-index="${i}"></div>`
+                `<div class="progress-dot${i === activeIndex ? ' active' : ''}" data-index="${i}"></div>`
             ).join('');
 
             // Update total count
             container.querySelector('.total').textContent = itinerary.days.length;
+
+            // Set active card
+            const cards = container.querySelectorAll('.card');
+            cards.forEach((card, i) => {
+                card.classList.toggle('active', i === activeIndex);
+            });
+
+            // Update page counter
+            container.querySelector('.page-counter .current').textContent = activeIndex + 1;
+
+            // Update down button visibility
+            const downBtn = container.querySelector('.nav-down');
+            downBtn.classList.toggle('hidden', activeIndex === itinerary.days.length - 1);
         }
 
         // Initialize app
         function initApp() {
             renderCards();
 
-            const cards = document.querySelectorAll('.card');
-            const dots = document.querySelectorAll('.progress-dot');
             const downBtn = document.querySelector('.nav-down');
             const pageCounter = document.querySelector('.page-counter .current');
-            const totalCards = cards.length;
-            let currentIndex = 0;
             let isAnimating = false;
 
             function goToCard(index) {
+                const cards = document.querySelectorAll('.card');
+                const dots = document.querySelectorAll('.progress-dot');
+                const totalCards = cards.length;
+
                 if (isAnimating || index < 0 || index >= totalCards) return;
 
                 isAnimating = true;
@@ -776,6 +847,22 @@
                 } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
                     e.preventDefault();
                     goToCard(currentIndex - 1);
+                }
+            });
+
+            // Language toggle
+            document.querySelector('.lang-toggle').addEventListener('click', (e) => {
+                if (e.target.classList.contains('lang-btn') && !e.target.classList.contains('active')) {
+                    const newLang = e.target.dataset.lang;
+                    currentLang = newLang;
+
+                    // Update button states
+                    document.querySelectorAll('.lang-btn').forEach(btn => {
+                        btn.classList.toggle('active', btn.dataset.lang === newLang);
+                    });
+
+                    // Re-render cards preserving current position
+                    renderCards(true);
                 }
             });
         }

@@ -1,9 +1,15 @@
 {
   "trip": {
     "title": "Japan",
-    "subtitle": "冬の旅",
-    "dates": "December 24 — January 1",
-    "year": "Winter 2024 / 25",
+    "subtitle": {
+      "en": "Winter Journey",
+      "ko": "겨울 여행"
+    },
+    "dates": {
+      "en": "December 24 — January 1",
+      "ko": "12월 24일 — 1월 1일"
+    },
+    "year": "Winter 2025",
     "travelers": ["Chloe", "Minjeong", "Charles"]
   },
   "days": [
@@ -14,80 +20,156 @@
     },
     {
       "type": "day",
-      "dayLabel": "Day 1 — Wednesday",
-      "date": "Dec 24",
-      "title": "Arrival in Tokyo",
+      "dayLabel": {
+        "en": "Day 1 — Wednesday",
+        "ko": "1일차 — 수요일"
+      },
+      "date": {
+        "en": "Dec 24",
+        "ko": "12월 24일"
+      },
+      "title": {
+        "en": "Arrival in Tokyo",
+        "ko": "도쿄 도착"
+      },
       "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
       "imageAlt": "Tokyo cityscape",
-      "tags": [{ "text": "Arrival", "class": "tag-travel" }],
-      "description": "Chloe and Minjeong touch down in Tokyo. Clear customs, grab your bags, and make your way to the hotel. Take it easy after the long flight.",
+      "tags": [
+        { "text": { "en": "Arrival", "ko": "도착" }, "class": "tag-travel" }
+      ],
+      "description": {
+        "en": "Chloe and Minjeong touch down in Tokyo. Clear customs, grab your bags, and make your way to the hotel. Take it easy after the long flight.",
+        "ko": "Chloe와 Minjeong이 도쿄에 도착합니다. 입국 심사를 마치고 짐을 찾은 후 호텔로 이동하세요. 긴 비행 후 편히 쉬세요."
+      },
       "infoBlocks": [
-        { "icon": "🏨", "label": "Stay", "title": "Tokyo", "subtitle": "Hotel TBD" }
+        {
+          "icon": "🏨",
+          "label": { "en": "Stay", "ko": "숙소" },
+          "title": { "en": "Tokyo", "ko": "도쿄" },
+          "subtitle": { "en": "Hotel TBD", "ko": "호텔 미정" }
+        }
       ]
     },
     {
       "type": "day",
-      "dayLabel": "Day 2 — Thursday",
-      "date": "Dec 25",
-      "title": "To the Mountains",
+      "dayLabel": {
+        "en": "Day 2 — Thursday",
+        "ko": "2일차 — 목요일"
+      },
+      "date": {
+        "en": "Dec 25",
+        "ko": "12월 25일"
+      },
+      "title": {
+        "en": "To the Mountains",
+        "ko": "산으로"
+      },
       "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80",
       "imageAlt": "Shinkansen bullet train",
       "tags": [
-        { "text": "Christmas", "class": "tag-travel" },
-        { "text": "Ski Country", "class": "tag-ski" }
+        { "text": { "en": "Christmas", "ko": "크리스마스" }, "class": "tag-travel" },
+        { "text": { "en": "Ski Country", "ko": "스키장" }, "class": "tag-ski" }
       ],
-      "description": "Merry Christmas! Travel through snowy countryside to Shiga Kogen — Japan's largest ski resort.",
+      "description": {
+        "en": "Merry Christmas! Travel through snowy countryside to Shiga Kogen — Japan's largest ski resort.",
+        "ko": "메리 크리스마스! 눈 덮인 시골을 지나 일본 최대 스키 리조트인 시가 고원으로 이동합니다."
+      },
       "timeline": [
-        { "time": "Afternoon", "title": "Shinkansen to Nagano", "detail": "Bullet train from Tokyo", "cost": "¥8,500" },
-        { "time": "Late PM", "title": "Local train + shuttle", "detail": "Nagano → Yudanaka → Shiga Kogen", "cost": "¥1,590" },
-        { "time": "Evening", "title": "Teppa Room", "detail": "Local Shiga Kogen craft beers" }
+        {
+          "time": { "en": "Afternoon", "ko": "오후" },
+          "title": { "en": "Shinkansen to Nagano", "ko": "나가노행 신칸센" },
+          "detail": { "en": "Bullet train from Tokyo", "ko": "도쿄에서 고속열차" },
+          "cost": "¥8,500"
+        },
+        {
+          "time": { "en": "Late PM", "ko": "저녁" },
+          "title": { "en": "Local train + shuttle", "ko": "로컬 열차 + 셔틀" },
+          "detail": { "en": "Nagano → Yudanaka → Shiga Kogen", "ko": "나가노 → 유다나카 → 시가고원" },
+          "cost": "¥1,590"
+        },
+        {
+          "time": { "en": "Evening", "ko": "밤" },
+          "title": { "en": "Teppa Room", "ko": "텟파 룸" },
+          "detail": { "en": "Local Shiga Kogen craft beers", "ko": "시가고원 수제 맥주" }
+        }
       ],
       "infoBlocks": [
         {
           "icon": "🏔️",
-          "label": "Stay",
-          "title": "Villa Ichinose",
-          "subtitle": "Shiga Kogen · Check-in 14:00-21:00",
+          "label": { "en": "Stay", "ko": "숙소" },
+          "title": { "en": "Villa Ichinose", "ko": "빌라 이치노세" },
+          "subtitle": { "en": "Shiga Kogen · Check-in 14:00-21:00", "ko": "시가고원 · 체크인 14:00-21:00" },
           "confirmation": {
             "file": "confirmations/1688894602775091 check-in voucher.pdf",
             "number": "RYa0m2g2up",
-            "status": "Paid"
+            "status": { "en": "Paid", "ko": "결제완료" }
           }
         }
       ]
     },
     {
       "type": "day",
-      "dayLabel": "Day 3 — Friday",
-      "date": "Dec 26",
-      "title": "Ski Day",
+      "dayLabel": {
+        "en": "Day 3 — Friday",
+        "ko": "3일차 — 금요일"
+      },
+      "date": {
+        "en": "Dec 26",
+        "ko": "12월 26일"
+      },
+      "title": {
+        "en": "Ski Day",
+        "ko": "스키"
+      },
       "image": "https://images.unsplash.com/photo-1486591978090-58e619d37fe7?w=800&q=80",
       "imageAlt": "Skiing in Japan",
-      "tags": [{ "text": "Skiing", "class": "tag-ski" }],
-      "description": "Hit the slopes! Ski lessons with Ride Shiga at Ichinose Family resort.",
+      "tags": [
+        { "text": { "en": "Skiing", "ko": "스키" }, "class": "tag-ski" }
+      ],
+      "description": {
+        "en": "Hit the slopes! Ski lessons with Ride Shiga at Ichinose Family resort.",
+        "ko": "슬로프로! 이치노세 패밀리 리조트에서 Ride Shiga 스키 레슨."
+      },
       "highlight": {
-        "title": "Ride Shiga Lessons",
-        "text": "Book at ride-shiga.com — group or private lessons for all levels."
+        "title": { "en": "Ride Shiga Lessons", "ko": "Ride Shiga 레슨" },
+        "text": { "en": "Book at ride-shiga.com — group or private lessons for all levels.", "ko": "ride-shiga.com에서 예약 — 모든 레벨의 그룹 또는 개인 레슨." }
       },
       "infoBlocks": [
-        { "icon": "⛷️", "label": "Resort", "title": "Ichinose Family", "subtitle": "Part of Japan's largest ski area — 19 connected resorts" }
+        {
+          "icon": "⛷️",
+          "label": { "en": "Resort", "ko": "리조트" },
+          "title": { "en": "Ichinose Family", "ko": "이치노세 패밀리" },
+          "subtitle": { "en": "Part of Japan's largest ski area — 19 connected resorts", "ko": "일본 최대 스키장의 일부 — 19개 연결 리조트" }
+        }
       ]
     },
     {
       "type": "day",
-      "dayLabel": "Day 3 — Evening",
-      "date": "Dec 26",
-      "title": "Shibu Onsen",
+      "dayLabel": {
+        "en": "Day 3 — Evening",
+        "ko": "3일차 — 저녁"
+      },
+      "date": {
+        "en": "Dec 26",
+        "ko": "12월 26일"
+      },
+      "title": {
+        "en": "Shibu Onsen",
+        "ko": "시부 온천"
+      },
       "image": "https://images.unsplash.com/photo-1553653924-39b70295f8da?w=800&q=80",
       "imageAlt": "Japanese onsen town",
       "tags": [
-        { "text": "Onsen", "class": "tag-onsen" },
-        { "text": "Kaiseki", "class": "tag-food" }
+        { "text": { "en": "Onsen", "ko": "온천" }, "class": "tag-onsen" },
+        { "text": { "en": "Kaiseki", "ko": "가이세키" }, "class": "tag-food" }
       ],
-      "description": "Bus to the historic hot spring town. Check into your ryokan, enjoy kaiseki dinner, then onsen hop in your yukata.",
+      "description": {
+        "en": "Bus to the historic hot spring town. Check into your ryokan, enjoy kaiseki dinner, then onsen hop in your yukata.",
+        "ko": "역사적인 온천 마을로 버스 이동. 료칸에 체크인하고, 가이세키 저녁을 즐긴 후, 유카타를 입고 온천 투어를 하세요."
+      },
       "onsenGrid": {
-        "title": "The Nine Baths",
-        "subtitle": "Each has different healing properties. Hit 3-4 tonight!",
+        "title": { "en": "The Nine Baths", "ko": "9개의 온천" },
+        "subtitle": { "en": "Each has different healing properties. Hit 3-4 tonight!", "ko": "각각 다른 치유 효과가 있어요. 오늘 밤 3-4개 도전!" },
         "baths": [
           { "num": 1, "name": "初湯" },
           { "num": 2, "name": "笹の湯" },
@@ -103,75 +185,162 @@
       "infoBlocks": [
         {
           "icon": "🏯",
-          "label": "Stay",
-          "title": "Shibu Hotel (渋ホテル)",
-          "subtitle": "Yudanaka · Economy Twin Non-Smoking",
+          "label": { "en": "Stay", "ko": "숙소" },
+          "title": { "en": "Shibu Hotel (渋ホテル)", "ko": "시부 호텔 (渋ホテル)" },
+          "subtitle": { "en": "Yudanaka · Economy Twin Non-Smoking", "ko": "유다나카 · 이코노미 트윈 금연" },
           "confirmation": {
             "file": "confirmations/Confirmation_for_Booking_ID_#_1678348913.pdf",
             "number": "1678348913",
-            "status": "Paid"
+            "status": { "en": "Paid", "ko": "결제완료" }
           }
         }
       ]
     },
     {
       "type": "day",
-      "dayLabel": "Day 4 — Saturday",
-      "date": "Dec 27",
-      "title": "Snow Monkeys",
+      "dayLabel": {
+        "en": "Day 4 — Saturday",
+        "ko": "4일차 — 토요일"
+      },
+      "date": {
+        "en": "Dec 27",
+        "ko": "12월 27일"
+      },
+      "title": {
+        "en": "Snow Monkeys",
+        "ko": "눈 원숭이"
+      },
       "image": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
       "imageAlt": "Snow monkeys",
       "tags": [
-        { "text": "Morning Baths", "class": "tag-onsen" },
-        { "text": "Tokyo", "class": "tag-travel" }
+        { "text": { "en": "Morning Baths", "ko": "아침 온천" }, "class": "tag-onsen" },
+        { "text": { "en": "Tokyo", "ko": "도쿄" }, "class": "tag-travel" }
       ],
       "timeline": [
-        { "time": "6:00 AM", "title": "Early morning baths", "detail": "Squeeze in 2-3 more before breakfast" },
-        { "time": "10:00 AM", "title": "Checkout", "detail": "Optional: Bath #9 after", "cost": "¥500" },
-        { "time": "Late AM", "title": "Jigokudani Monkey Park", "detail": "~30 min walk through snowy forest" },
-        { "time": "Afternoon", "title": "Return to Tokyo", "detail": "Train back to the city" }
+        {
+          "time": "6:00 AM",
+          "title": { "en": "Early morning baths", "ko": "이른 아침 온천" },
+          "detail": { "en": "Squeeze in 2-3 more before breakfast", "ko": "아침 식사 전 2-3개 더 도전" }
+        },
+        {
+          "time": "10:00 AM",
+          "title": { "en": "Checkout", "ko": "체크아웃" },
+          "detail": { "en": "Optional: Bath #9 after", "ko": "선택: 체크아웃 후 9번 온천" },
+          "cost": "¥500"
+        },
+        {
+          "time": { "en": "Late AM", "ko": "오전 늦게" },
+          "title": { "en": "Jigokudani Monkey Park", "ko": "지고쿠다니 원숭이 공원" },
+          "detail": { "en": "~30 min walk through snowy forest", "ko": "눈 덮인 숲을 ~30분 걷기" }
+        },
+        {
+          "time": { "en": "Afternoon", "ko": "오후" },
+          "title": { "en": "Return to Tokyo", "ko": "도쿄로 복귀" },
+          "detail": { "en": "Train back to the city", "ko": "도시로 돌아가는 기차" }
+        }
       ],
       "infoBlocks": [
-        { "icon": "🏨", "label": "Stay", "title": "Tokyo", "subtitle": "Hotel TBD" }
+        {
+          "icon": "🏨",
+          "label": { "en": "Stay", "ko": "숙소" },
+          "title": { "en": "Tokyo", "ko": "도쿄" },
+          "subtitle": { "en": "Hotel TBD", "ko": "호텔 미정" }
+        }
       ]
     },
     {
       "type": "day",
-      "dayLabel": "Day 5 — Sunday",
-      "date": "Dec 28",
-      "title": "Tokyo Day",
+      "dayLabel": {
+        "en": "Day 5 — Sunday",
+        "ko": "5일차 — 일요일"
+      },
+      "date": {
+        "en": "Dec 28",
+        "ko": "12월 28일"
+      },
+      "title": {
+        "en": "Tokyo Day",
+        "ko": "도쿄 탐험"
+      },
       "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&q=80",
       "imageAlt": "Tokyo street",
-      "tags": [{ "text": "City", "class": "tag-city" }],
-      "description": "Minjeong flies out in the morning. Spend the day exploring Tokyo with Chloe — endless neighborhoods, incredible food, unforgettable moments.",
+      "tags": [
+        { "text": { "en": "City", "ko": "도시" }, "class": "tag-city" }
+      ],
+      "description": {
+        "en": "Minjeong flies out in the morning. Spend the day exploring Tokyo with Chloe — endless neighborhoods, incredible food, unforgettable moments.",
+        "ko": "Minjeong이 아침에 출발합니다. Chloe와 함께 도쿄를 탐험하세요 — 끝없는 동네, 맛있는 음식, 잊지 못할 순간들."
+      },
       "infoBlocks": [
-        { "icon": "✈️", "label": "Departure", "title": "Safe travels, Minjeong!", "subtitle": "See you next time" },
-        { "icon": "🏨", "label": "Stay", "title": "Tokyo", "subtitle": "Hotel TBD" }
+        {
+          "icon": "✈️",
+          "label": { "en": "Departure", "ko": "출발" },
+          "title": { "en": "Safe travels, Minjeong!", "ko": "좋은 여행 되세요, Minjeong!" },
+          "subtitle": { "en": "See you next time", "ko": "다음에 또 만나요" }
+        },
+        {
+          "icon": "🏨",
+          "label": { "en": "Stay", "ko": "숙소" },
+          "title": { "en": "Tokyo", "ko": "도쿄" },
+          "subtitle": { "en": "Hotel TBD", "ko": "호텔 미정" }
+        }
       ]
     },
     {
       "type": "day",
-      "dayLabel": "Days 6-8",
-      "date": "Dec 29-31",
-      "title": "Tokyo & NYE",
+      "dayLabel": {
+        "en": "Days 6-8",
+        "ko": "6-8일차"
+      },
+      "date": {
+        "en": "Dec 29-31",
+        "ko": "12월 29-31일"
+      },
+      "title": {
+        "en": "Tokyo & NYE",
+        "ko": "도쿄 & 새해"
+      },
       "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&q=80",
       "imageAlt": "Shibuya crossing",
       "tags": [
-        { "text": "Explore", "class": "tag-city" },
-        { "text": "Eat", "class": "tag-food" }
+        { "text": { "en": "Explore", "ko": "탐험" }, "class": "tag-city" },
+        { "text": { "en": "Eat", "ko": "맛집" }, "class": "tag-food" }
       ],
-      "description": "Three full days in Tokyo. Explore, eat, relax. Ring in 2025 your way.",
+      "description": {
+        "en": "Three full days in Tokyo. Explore, eat, relax. Ring in 2025 your way.",
+        "ko": "도쿄에서 3일. 탐험하고, 먹고, 쉬세요. 당신만의 방식으로 2025년을 맞이하세요."
+      },
       "options": [
-        { "icon": "🎉", "title": "Shibuya Countdown", "text": "The famous crossing at midnight. Pure energy." },
-        { "icon": "⛩️", "title": "Hatsumode at Meiji Shrine", "text": "Traditional first shrine visit. Peaceful and spiritual." }
+        {
+          "icon": "🎉",
+          "title": { "en": "Shibuya Countdown", "ko": "시부야 카운트다운" },
+          "text": { "en": "The famous crossing at midnight. Pure energy.", "ko": "자정의 유명한 교차로. 순수한 에너지." }
+        },
+        {
+          "icon": "⛩️",
+          "title": { "en": "Hatsumode at Meiji Shrine", "ko": "메이지 신궁 하츠모데" },
+          "text": { "en": "Traditional first shrine visit. Peaceful and spiritual.", "ko": "전통적인 새해 첫 참배. 평화롭고 영적인 경험." }
+        }
       ],
       "infoBlocks": [
-        { "icon": "🏨", "label": "Stay", "title": "Tokyo", "subtitle": "Hotel TBD" }
+        {
+          "icon": "🏨",
+          "label": { "en": "Stay", "ko": "숙소" },
+          "title": { "en": "Tokyo", "ko": "도쿄" },
+          "subtitle": { "en": "Hotel TBD", "ko": "호텔 미정" }
+        }
       ]
     },
     {
       "type": "final",
-      "dayLabel": "January 1",
+      "dayLabel": {
+        "en": "January 1",
+        "ko": "1월 1일"
+      },
+      "farewell": {
+        "en": "See you again, Japan",
+        "ko": "다시 만나요, 일본"
+      },
       "image": "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&q=80",
       "imageAlt": "Mount Fuji"
     }
